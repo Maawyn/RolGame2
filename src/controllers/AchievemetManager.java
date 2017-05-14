@@ -25,6 +25,7 @@ public class AchievemetManager {
 		this.hma.put("Extinguir a los Ratón Nube", false);
 		this.hma.put("La suerte te acompañó por este camino", false);
 		this.hma.put("Fuente de sangre", false);
+		this.hma.put("Estafado", false);
 	}
 	
 	public boolean addAchievement(String achievement){
@@ -42,7 +43,7 @@ public class AchievemetManager {
 			return;
 		}
 		for (String achievement : this.hma.keySet()) {
-			Boolean value = this.hma.get(achievement); //Rip parentesis [(] 2017 -2017
+			Boolean value = this.hma.get(achievement); //Rip parenthesis [(] 2017 -2017
 			if(value){
 				System.out.println("\t" + achievement + ".");
 			}

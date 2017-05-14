@@ -4,13 +4,13 @@ import entities.Node;
 
 public class BinaryTree {
 	private Node root;
-	private Node actual;
+	private Node current;
 	
 	public BinaryTree(){
 		root = null;
 	}
 	
-	//Método de inserción
+	//Insertion method
 	public void addRoot(Node e){
 		if(isEmpty()) {
 			root = e;
@@ -23,11 +23,11 @@ public class BinaryTree {
 		return root == null;
 	}
 	public Node getActual(){
-		return actual;
+		return current;
 	}
 	public void addTo(int idParent, Node e){
 		inOrder(idParent, root);
-		Node parent = actual;
+		Node parent = current;
 		
 		if(!parent.hasLeft()){
 			parent.setLeft(e);
@@ -45,16 +45,15 @@ public class BinaryTree {
         if(e != null){
             this.inOrder(id, e.getLeft());
             if(e.getId() == id)
-                this.actual = e;
+                this.current = e;
             this.inOrder(id, e.getRight());
         }
     }
 	
-	public Node searchId(int id, Node start){ //start. nodo que pasamos de comienzo
-		
-		if(isEmpty()) throw new RuntimeException ("This tree is empty"); //No está vacio CORRECTO
-		if(start.getId() == id) //CORRECTO
-			return start; // CORRECTO
+	public Node searchId(int id, Node start){ //start. Node were we start the search		
+		if(isEmpty()) throw new RuntimeException ("This tree is empty"); 
+		if(start.getId() == id) //CORRECT
+			return start; // CORRECT
 		else if(start.hasLeft() && start.getId() != id) // If the actual node has a different id look the left child
 			return searchId(id, start.getLeft());
 		else if(start.hasRight() && start.getId() != id) // If the actual node has a different id look the right child
@@ -66,25 +65,5 @@ public class BinaryTree {
 	public Node getRoot(){
 		return root;
 	}
-	
-	 public void preOrder(Node e){
-	        if(e != null){
-	        	System.out.println(e.toString());
-	            this.preOrder(e.getLeft());
-	            this.preOrder(e.getRight());
-	        }
-	    }
-	
-//	public void nextNode(boolean decision){
-//		Node actual = new Node(root);
-//		if(decision){
-//			actual = actual.getIzq();
-//		}else{
-//			actual = actual.getDer();
-//		}
-//	}
-	
-	
-	
 }
 

@@ -2,11 +2,11 @@ package entities;
 
 public class GroupEnemies {
 	private String name;
-	private int cantidad;
+	private int quantity;
 	
-	public GroupEnemies(String name, int cantidad){
+	public GroupEnemies(String name, int quantity){
 		this.name = name;
-		this.cantidad = cantidad;
+		this.quantity = quantity;
 	}
 
 	public String getName() {
@@ -14,7 +14,7 @@ public class GroupEnemies {
 	}
 
 	public int getCantidad() {
-		return cantidad;
+		return quantity;
 	}
 	
 	

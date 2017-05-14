@@ -5,21 +5,17 @@ import interfaces.IPersonaje;
 public class Jugador implements IPersonaje {
 	private int vida, mana;
 	private String nombre;
-//	private ArrayList<Item> inventario;
-//	private ItemManager itemManager = new ItemManager();
 	
 	public Jugador(){
 		this.vida = 100;
 		this.mana = 100;
 		this.nombre = "UsuarioGenerico";
-		//this.inv = new Inventario();
 	}
 	
 	public Jugador(String nombre){
 		this.vida = 100;
 		this.mana = 100;
 		this.nombre = nombre;
-		//this.inv = new Inventario();
 	}
 	
 	public String getNombre() {
