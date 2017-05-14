@@ -75,4 +75,33 @@ public class Generator {
 		hma.put(291, new String[]{"Quien con Goblins ha de entender, muy avisado ha de ser"});
 		hma.put(109, new String[]{"Fuente de sangre"});
 	}
+	
+	public void generateLifeEventsTable(HashMap<Integer, Integer> lm){
+		lm.put(7, -100);
+		lm.put(17, -50);
+		lm.put(25, -100);
+		lm.put(69, -100);
+		lm.put(71, -100);
+		lm.put(73, -100);
+		lm.put(74, -100);
+		lm.put(75, -100);
+		lm.put(77, -100);
+		lm.put(78, -100);
+		lm.put(79, -100);
+		lm.put(105, -100);
+		lm.put(109, -100);
+		lm.put(257, -100);
+		lm.put(259, -100);
+		lm.put(261, -100);
+		lm.put(263, -100);
+		lm.put(273, +50);
+		lm.put(275, -100);
+		lm.put(280, -100);
+		lm.put(281, -100);
+		lm.put(289, -100);
+		lm.put(291, -100);
+		lm.put(305, -100);
+		lm.put(307, -100);
+	
+	}
 }

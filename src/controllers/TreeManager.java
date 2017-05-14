@@ -11,8 +11,12 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class TreeManager {
-	private String name = "Babah";
+	private String name = "Default";
 	private BinaryTree BTree = new BinaryTree();
+	
+	public void setName(String name){
+		this.name = name;
+	}
 	
 	public BinaryTree generateBinaryTree(){
 		BTree = new BinaryTree();
